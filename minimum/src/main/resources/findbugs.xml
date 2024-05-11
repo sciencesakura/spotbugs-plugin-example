@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SpotBugsはpluginid属性でプラグインを識別するので他のプラグインと重複しないよう注意 -->
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/spotbugs/spotbugs/4.8.4/spotbugs/etc/findbugsplugin.xsd"
+  pluginid="com.sciencesakura.example.minimum"
+  version="1.0.0"
+  provider="sciencesakura.com">
+
+  <!--
+  Detectorの定義.
+  reports属性でこのDetectorが検出しうるBugPatternを紐付ける. カンマ区切りで複数指定可
+  -->
+  <Detector class="com.sciencesakura.example.DetectHogeClass" reports="X_DISALLOW_HOGE"/>
+
+  <!--
+  BugPatternの定義.
+  abbrevはBugCode, categoryはBugCategoryに相当する.
+  -->
+  <BugPattern type="X_DISALLOW_HOGE" abbrev="X" category="EXAMPLES"/>
+</FindbugsPlugin>
