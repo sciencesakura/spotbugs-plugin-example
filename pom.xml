@@ -88,6 +88,7 @@
   <modules>
     <module>minimum</module>
     <module>minimum2</module>
+    <module>visitor</module>
   </modules>
 
   <build>

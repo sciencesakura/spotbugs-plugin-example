@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MessageCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/spotbugs/spotbugs/4.8.4/spotbugs/etc/messagecollection.xsd">
+
+  <Plugin>
+    <ShortDescription>Example plugin</ShortDescription>
+    <Details>SpotBugsで独自バグパターンを作ってみたサンプル</Details>
+  </Plugin>
+
+  <BugCategory category="EXAMPLE">
+    <Description>Example</Description>
+    <Abbreviation>X</Abbreviation>
+    <Details>The example category</Details>
+  </BugCategory>
+
+  <Detector class="com.sciencesakura.example.DebugVisitor">
+    <Details>デバッグ用Visitor</Details>
+  </Detector>
+  <Detector class="com.sciencesakura.example.DetectMutableSpringBean">
+    <Details>ミュータブルなSpring Beanを検出する</Details>
+  </Detector>
+
+  <BugPattern type="X_DEBUG">
+    <ShortDescription>Debug</ShortDescription>
+    <LongDescription>Debug</LongDescription>
+    <Details>Debug</Details>
+  </BugPattern>
+  <BugPattern type="X_MUTABLE_SPRING_BEAN">
+    <ShortDescription>ミュータブルなSpring管理Bean</ShortDescription>
+    <LongDescription>ミュータブルなSpring管理Bean</LongDescription>
+    <Details>ミュータブルなSpring管理Bean</Details>
+  </BugPattern>
+
+  <BugCode abbrev="X">Example</BugCode>
+</MessageCollection>

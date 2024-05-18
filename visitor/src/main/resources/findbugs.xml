@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindbugsPlugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/spotbugs/spotbugs/4.8.4/spotbugs/etc/findbugsplugin.xsd"
+  pluginid="com.sciencesakura.example.visitor"
+  version="1.0.0"
+  provider="sciencesakura.com">
+
+  <Detector class="com.sciencesakura.example.DebugVisitor" reports="X_DEBUG"/>
+  <Detector class="com.sciencesakura.example.DetectMutableSpringBean" reports="X_MUTABLE_SPRING_BEAN"/>
+
+  <BugPattern type="X_DEBUG" abbrev="X" category="EXAMPLES"/>
+  <BugPattern type="X_MUTABLE_SPRING_BEAN" abbrev="X" category="EXAMPLES"/>
+</FindbugsPlugin>
